@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpDeskCollege — Система заявок</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="logo-icon">H</span>
+            <div>
+                <strong>HelpDesk</strong>
+                <small>COLLEGE</small>
+            </div>
+        </div>
+
+        <p class="menu-title">ГЛАВНОЕ МЕНЮ</p>
+
+        <nav>
+            <a href="#" class="nav-link active">▦ Обзор</a>
+            <a href="#requests" class="nav-link">▤ Заявки</a>
+            <a href="#categories" class="nav-link">▧ Категории</a>
+            <a href="#users" class="nav-link">♙ Пользователи</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <span>Система поддержки</span>
+            <small>Версия 1.0</small>
+        </div>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Панель управления</h1>
+                <p>Система регистрации заявок ИТ-службы</p>
+            </div>
+            <div class="profile">
+                <div class="avatar">А</div>
+                <div>
+                    <strong>Администратор</strong>
+                    <small>Сотрудник ИТ-службы</small>
+                </div>
+            </div>
+        </header>
+
+        <section class="welcome">
+            <div>
+                <h2>Добро пожаловать!</h2>
+                <p>Здесь вы можете контролировать и обрабатывать заявки.</p>
+            </div>
+            <button class="primary-btn" id="addRequest">
+                + Новая заявка
+            </button>
+        </section>
+
+        <section class="stats">
+            <article class="stat-card">
+                <span>Всего заявок</span>
+                <strong id="totalCount">0</strong>
+                <small>Все зарегистрированные заявки</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Новые</span>
+                <strong id="newCount">0</strong>
+                <small>Ожидают обработки</small>
+            </article>
+
+            <article class="stat-card">
+                <span>В работе</span>
+                <strong id="progressCount">0</strong>
+                <small>На рассмотрении</small>
+            </article>
+
+            <article class="stat-card">
+                <span>Завершённые</span>
+                <strong id="doneCount">0</strong>
+                <small>Успешно решённые</small>
+            </article>
+        </section>
+
+        <section class="requests" id="requests">
+            <div class="section-heading">
+                <div>
+                    <h2>Последние заявки</h2>
+                    <p>Управление обращениями пользователей</p>
+                </div>
+            </div>
+
+            <div class="filters">
+                <input type="text" id="searchInput"
+                       placeholder="Поиск по названию заявки...">
+
+                <select id="statusFilter">
+                    <option value="Все">Все статусы</option>
+                    <option value="Новая">Новая</option>
+                    <option value="В работе">В работе</option>
+                    <option value="Завершена">Завершена</option>
+                    <option value="Отклонена">Отклонена</option>
+                </select>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Название заявки</th>
+                            <th>Категория</th>
+                            <th>Статус</th>
+                            <th>Приоритет</th>
+                            <th>Действие</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestTable"></tbody>
+                </table>
+                </div>
+        </section>
+
+        <footer>
+            HelpDeskCollege © 2026 · Информационная система колледжа
+        </footer>
+        <!-- Раздел категорий -->
+<section id="categories" class="content-section">
+    <h2>Категории заявок</h2>
+    <p>Список категорий, используемых в системе HelpDeskCollege.</p>
+
+    <div class="category-grid">
+        <div class="category-card">
+            <h3>Оборудование</h3>
+            <p>Неисправности компьютеров, принтеров и другой техники.</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Программное обеспечение</h3>
+            <p>Ошибки программ и установка приложений.</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Сеть</h3>
+            <p>Проблемы с интернетом и локальной сетью.</p>
+        </div>
+
+        <div class="category-card">
+            <h3>Доступ</h3>
+            <p>Проблемы с учётными записями и доступом к ресурсам.</p>
+        </div>
+    </div>
+</section>
+    </main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
